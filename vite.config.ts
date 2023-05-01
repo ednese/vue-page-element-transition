@@ -3,9 +3,24 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import typescript2 from "rollup-plugin-typescript2";
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    typescript2({
+      check: false,
+      include: ["src/components/*.vue"],
+      tsconfigOverride: {
+        compilerOptions: {
+          sourceMap: true,
+          declaration: true,
+          declarationMap: true,
+        },
+        exclude: ["vite.config.ts", "main.ts"],
+      },
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -13,11 +28,10 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'src/plugins/vue-page-element-transition.ts'),
+      formats: ["es", "cjs"],
       name: 'VuePageElementTransition',
-      // the proper extensions will be added
-      fileName: 'vue-page-element-transition',
+      fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
