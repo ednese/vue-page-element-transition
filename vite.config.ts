@@ -28,7 +28,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/plugins/vue-page-element-transition.ts'),
+      entry: resolve(__dirname, 'index.ts'),
       formats: ["es", "cjs"],
       name: 'VuePageElementTransition',
       fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
