@@ -1,0 +1,46 @@
+@import './base.css';
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  font-weight: normal;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+#app main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+
+.box_container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0/8%), 0 3px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+}
