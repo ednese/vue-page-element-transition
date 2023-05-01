@@ -14,10 +14,10 @@ export default defineConfig({
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'src/plugins/page-element-transition.ts'),
-      name: 'PageElementTransition',
+      entry: resolve(__dirname, 'src/plugins/vue-page-element-transition.ts'),
+      name: 'VuePageElementTransition',
       // the proper extensions will be added
-      fileName: 'page-element-transition',
+      fileName: 'vue-page-element-transition',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

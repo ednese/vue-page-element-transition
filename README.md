@@ -15,7 +15,7 @@ Import it
 
 
 ```js
-import vueElementTransition from './plugins/page-element-transition'
+import vueElementTransition from 'vue-page-element-transition'
 
 // ...
 

@@ -1,14 +1,14 @@
 {
   "name": "vue-page-element-transition",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "type": "module",
   "files": ["dist"],
-  "main": "./dist/page-element-transition.umd.js",
-  "module": "./dist/page-element-transition.mjs",
+  "main": "./dist/vue-page-element-transition.umd.js",
+  "module": "./dist/vue-page-element-transition.mjs",
   "exports": {
     ".": {
-      "import": "./dist/page-element-transition.mjs",
-      "require": "./dist/page-element-transition.umd.js"
+      "import": "./dist/vue-page-element-transition.mjs",
+      "require": "./dist/vue-page-element-transition.umd.js"
     }
   },
   "private": false,
